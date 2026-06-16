@@ -483,12 +483,30 @@ nav{padding-top:env(safe-area-inset-top);}
         </div>
       </div>
       <div class="rv" style="transition-delay:.15s">
-        <div class="cf">
-          <div class="fg"><label>Your Name</label><input type="text" placeholder="John Smith"></div>
-          <div class="fg"><label>Email</label><input type="email" placeholder="recruiter@company.com"></div>
-          <div class="fg"><label>Message</label><textarea rows="5" placeholder="Tell me about the opportunity..."></textarea></div>
-          <button class="btn btnc" style="width:100%;text-align:center;cursor:none" onclick="snd(this)">&#8658; Send Message</button>
-        </div>
+        <form action="https://api.web3forms.com/submit" method="POST" class="cf">
+
+  <input type="hidden" name="access_key" value="a0b94efb-323b-49ba-acbb-1c52f47216ee">
+
+  <div class="fg">
+    <label>Your Name</label>
+    <input type="text" name="name" placeholder="John Smith" required>
+  </div>
+
+  <div class="fg">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="recruiter@company.com" required>
+  </div>
+
+  <div class="fg">
+    <label>Message</label>
+    <textarea name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+  </div>
+
+  <button type="submit" class="btn btnc" style="width:100%;text-align:center">
+    &#8658; Send Message
+  </button>
+
+</form>
       </div>
     </div>
   </div>
