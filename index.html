@@ -72,7 +72,7 @@ section,footer{position:relative;z-index:2}
 .btnc:hover::before{transform:scaleX(1)}
 .btno{background:transparent;color:#00e5ff;border:1px solid #00e5ff;padding:13px 31px}
 .btno:hover{background:rgba(0,229,255,.1)}
-.hst{position:absolute;right:60px;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;gap:8px}
+.hst{position:absolute;right:20px;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;gap:8px}
 .hsi{padding:14px 22px;background:rgba(0,20,35,.82);border:1px solid rgba(0,229,255,.18);backdrop-filter:blur(12px);transition:border-color .25s}
 .hsi:hover{border-color:#00e5ff}
 .hsin{font-family:'Orbitron',monospace;font-size:26px;font-weight:700;color:#00e5ff;line-height:1}
@@ -121,7 +121,13 @@ section,footer{position:relative;z-index:2}
 .skt:hover{border-color:#00e5ff;color:#00e5ff;background:rgba(0,229,255,.05)}
 
 /* ── PROJECTS ── */
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pgrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  width:100%;
+  overflow:hidden;
+}
 .pc{background:rgba(2,10,18,.88);border:1px solid rgba(0,229,255,.1);padding:36px;width:100%;position:relative;overflow:hidden;transition:all .35s;text-decoration:none;color:inherit;display:block;backdrop-filter:blur(6px);cursor:none}
 .pc::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,229,255,.06),transparent);opacity:0;transition:opacity .35s}
 .pc:hover::after{opacity:1}
@@ -208,11 +214,6 @@ footer{background:rgba(0,0,0,.95);border-top:1px solid rgba(0,229,255,.08);paddi
   #dot,#ring,#sparkCanvas{display:none !important;}
 }
 html,body{-webkit-overflow-scrolling:touch;}
-body{
-  padding-left:env(safe-area-inset-left);
-  padding-right:env(safe-area-inset-right);
-}
-nav{padding-top:env(safe-area-inset-top);}
 
 @media(max-width:860px){
   #about > div > div[style*="repeat(4"]{grid-template-columns:1fr 1fr !important;}
@@ -249,6 +250,31 @@ nav{padding-top:env(safe-area-inset-top);}
     justify-content:center;
   }
 
+}
+  *{
+  max-width:100%;
+}
+
+html,
+body{
+  overflow-x:hidden !important;
+}
+
+canvas{
+  max-width:100%;
+}
+
+#globalBg,
+#sparkCanvas{
+  width:100vw !important;
+  left:0 !important;
+}
+
+.wrap{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  overflow:hidden;
 }
 
 </style>
