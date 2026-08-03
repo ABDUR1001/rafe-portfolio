@@ -47,9 +47,13 @@ nav{position:fixed;top:26px;left:0;right:0;z-index:600;height:52px;display:flex;
 .nlinks{display:flex;gap:30px;flex-shrink:0}
 .nlinks a{font-family:'Share Tech Mono',monospace;font-size:10px;color:#3a6070;text-decoration:none;letter-spacing:2px;text-transform:uppercase;transition:color .2s}
 .nlinks a:hover,.nlinks a.active{color:#00e5ff}
+.nright{display:flex;align-items:center;gap:18px;flex-shrink:0}
 .nonline{font-family:'Share Tech Mono',monospace;font-size:10px;color:#00ff9d;display:flex;align-items:center;gap:7px;flex-shrink:0}
 .ndot{width:6px;height:6px;border-radius:50%;background:#00ff9d;animation:pd 1.3s ease infinite}
 @keyframes pd{0%,100%{box-shadow:0 0 0 0 rgba(0,255,157,.7)}50%{box-shadow:0 0 0 7px rgba(0,255,157,0)}}
+.nres{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00e5ff;text-decoration:none;border:1px solid rgba(0,229,255,.4);padding:7px 14px;display:flex;align-items:center;gap:7px;transition:all .25s;flex-shrink:0;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.nres:hover{background:rgba(0,229,255,.12);border-color:#00e5ff;box-shadow:0 0 14px rgba(0,229,255,.25)}
+.nres svg{width:12px;height:12px;fill:currentColor;flex-shrink:0}
 
 /* ── ALL SECTIONS sit above canvas ── */
 section,footer{position:relative;z-index:2}
@@ -244,6 +248,8 @@ footer{background:rgba(0,0,0,.95);border-top:1px solid rgba(0,229,255,.08);paddi
   nav{padding:0 16px}
   .nlinks{display:none}
   .nonline{font-size:9px}
+  .nres{font-size:9px;padding:6px 10px;gap:5px}
+  .nres svg{width:10px;height:10px}
 
   /* Hero */
   #hero{padding:100px 20px 60px;align-items:flex-start}
@@ -287,6 +293,8 @@ footer{background:rgba(0,0,0,.95);border-top:1px solid rgba(0,229,255,.08);paddi
 @media(max-width:480px){
   nav{padding:0 12px}
   .nlogo{font-size:11px;letter-spacing:2px}
+  .nonline{display:none}
+  .nres span{display:none}
   .sec{padding:50px 16px}
   .bio-stats{grid-template-columns:1fr 1fr}
   .sgrid{grid-template-columns:1fr}
@@ -365,7 +373,13 @@ footer{background:rgba(0,0,0,.95);border-top:1px solid rgba(0,229,255,.08);paddi
     <a href="#certifications">Certs</a>
     <a href="#contact">Contact</a>
   </div>
-  <div class="nonline"><span class="ndot"></span>ONLINE &middot; SECURE</div>
+  <div class="nright">
+    <div class="nonline"><span class="ndot"></span>ONLINE &middot; SECURE</div>
+    <a class="nres" href="https://drive.google.com/uc?export=download&id=1yLedbObL-HENh26xUKABBgy9Z7nbwg8I" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      <span>Resume</span>
+    </a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -381,6 +395,7 @@ footer{background:rgba(0,0,0,.95);border-top:1px solid rgba(0,229,255,.08);paddi
     <p class="hdesc">Hunting threats, mapping adversaries to MITRE ATT&amp;CK, and engineering SOC environments from scratch. I turn logs into intelligence and anomalies into decisive action.</p>
     <div class="hbtns">
       <a href="#projects" class="btn btnc">&#9658; View Projects</a>
+      <a href="https://drive.google.com/uc?export=download&id=1yLedbObL-HENh26xUKABBgy9Z7nbwg8I" target="_blank" rel="noopener" class="btn btno">&#8681; Download Resume</a>
       <a href="https://github.com/ABDUR1001" target="_blank" class="btn btno">&#9729; GitHub Profile</a>
     </div>
   </div>
@@ -564,6 +579,7 @@ footer{background:rgba(0,0,0,.95);border-top:1px solid rgba(0,229,255,.08);paddi
           <a href="mailto:rafeabdur802@gmail.com" class="ctl"><span>✉</span>&nbsp; rafeabdur802@gmail.com</a>
           <a href="https://linkedin.com/in/rafe-sec" target="_blank" class="ctl"><span>in</span>&nbsp; linkedin.com/in/rafe-sec</a>
           <a href="https://github.com/ABDUR1001" target="_blank" class="ctl"><span>⌥</span>&nbsp; github.com/ABDUR1001</a>
+          <a href="https://drive.google.com/uc?export=download&id=1yLedbObL-HENh26xUKABBgy9Z7nbwg8I" target="_blank" rel="noopener" class="ctl"><span>⬇</span>&nbsp; Download Resume (PDF)</a>
         </div>
       </div>
       <div class="rv" style="transition-delay:.15s">
